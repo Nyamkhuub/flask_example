@@ -45,4 +45,4 @@ def upload_file():
 def get_pdf(name=None):
     return Response(json.dumps(os.listdir(app.config['UPLOAD_FOLDER'])), mimetype='application/json')
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, host='0.0.0.0', port=80)
